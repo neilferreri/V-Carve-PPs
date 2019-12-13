@@ -76,13 +76,13 @@ VAR Z_HOME_POSITION = [ZH|A|Z|1.3]
  
 begin HEADER
  
-"M6 T[T]"
 "G17"
 "G21"
 "G90"
+"M6 T[T]"
+"[S]M3"
 "G0[ZH]"
-"G0[XH][YH][S]"
-"M3"
+"G0[XH][YH]"
  
 +---------------------------------------------------
 +  Commands output for tool change
