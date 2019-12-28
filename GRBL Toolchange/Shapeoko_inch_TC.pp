@@ -17,6 +17,7 @@
 +                     Renaming to be machine specific.
 +                     Removing M30 from Footer.
 + Ferreri  5/7/2018   Added G04 DWELL & M6 TOOLCHANGE
++ Ferreri  12/27/2019 Uncommented arc commands
 +================================================
  
 POST_NAME = "Shapeoko (inch) TOOLCHANGE(*.gcode)"
@@ -127,36 +128,36 @@ begin FEED_MOVE
 +  Commands output for the first clockwise arc move
 +---------------------------------------------------
 
-+begin FIRST_CW_ARC_MOVE
+begin FIRST_CW_ARC_MOVE
 
-+"G2[X][Y][I][J][F]"
+"G2[X][Y][I][J][F]"
  
  
 +---------------------------------------------------
 +  Commands output for clockwise arc  move
 +---------------------------------------------------
  
-+begin CW_ARC_MOVE
+begin CW_ARC_MOVE
  
-+"G2[X][Y][I][J]"
+"G2[X][Y][I][J]"
  
  
 +---------------------------------------------------
 +  Commands output for the first counterclockwise arc move
 +---------------------------------------------------
  
-+begin FIRST_CCW_ARC_MOVE
+begin FIRST_CCW_ARC_MOVE
  
-+"G3[X][Y][I][J][F]"
+"G3[X][Y][I][J][F]"
  
  
 +---------------------------------------------------
 +  Commands output for counterclockwise arc  move
 +---------------------------------------------------
  
-+begin CCW_ARC_MOVE
+begin CCW_ARC_MOVE
  
-+"G3[X][Y][I][J]"
+"G3[X][Y][I][J]"
  
  
 +---------------------------------------------------
