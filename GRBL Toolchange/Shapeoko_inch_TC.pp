@@ -18,6 +18,8 @@
 +                     Removing M30 from Footer.
 + Ferreri  5/7/2018   Added G04 DWELL & M6 TOOLCHANGE
 + Ferreri  12/27/2019 Uncommented arc commands
++ Ferreri  1/25/2020  Ummmm...and related arc variables
++                     Added Rapid Plunge to StartZ
 +================================================
  
 POST_NAME = "Shapeoko (inch) TOOLCHANGE(*.gcode)"
@@ -25,6 +27,8 @@ POST_NAME = "Shapeoko (inch) TOOLCHANGE(*.gcode)"
 FILE_EXTENSION = "gcode"
  
 UNITS = "INCHES"
+
+RAPID_PLUNGE_TO_STARTZ = "YES"
  
 +------------------------------------------------
 +    Line terminating characters                 
@@ -52,8 +56,8 @@ VAR FEED_RATE = [F|C|F|1.1]
 VAR X_POSITION = [X|C|X|1.4]
 VAR Y_POSITION = [Y|C|Y|1.4]
 VAR Z_POSITION = [Z|C|Z|1.4]
-+VAR ARC_CENTRE_I_INC_POSITION = [I|A|I|1.4]
-+VAR ARC_CENTRE_J_INC_POSITION = [J|A|J|1.4]
+VAR ARC_CENTRE_I_INC_POSITION = [I|A|I|1.4]
+VAR ARC_CENTRE_J_INC_POSITION = [J|A|J|1.4]
 VAR X_HOME_POSITION = [XH|A|X|1.4]
 VAR Y_HOME_POSITION = [YH|A|Y|1.4]
 VAR Z_HOME_POSITION = [ZH|A|Z|1.4]
@@ -128,36 +132,36 @@ begin FEED_MOVE
 +  Commands output for the first clockwise arc move
 +---------------------------------------------------
 
-+begin FIRST_CW_ARC_MOVE
+begin FIRST_CW_ARC_MOVE
 
-+"G2[X][Y][I][J][F]"
+"G2[X][Y][I][J][F]"
  
  
 +---------------------------------------------------
 +  Commands output for clockwise arc  move
 +---------------------------------------------------
  
-+begin CW_ARC_MOVE
+begin CW_ARC_MOVE
  
-+"G2[X][Y][I][J]"
+"G2[X][Y][I][J]"
  
  
 +---------------------------------------------------
 +  Commands output for the first counterclockwise arc move
 +---------------------------------------------------
  
-+begin FIRST_CCW_ARC_MOVE
+begin FIRST_CCW_ARC_MOVE
  
-+"G3[X][Y][I][J][F]"
+"G3[X][Y][I][J][F]"
  
  
 +---------------------------------------------------
 +  Commands output for counterclockwise arc  move
 +---------------------------------------------------
  
-+begin CCW_ARC_MOVE
+begin CCW_ARC_MOVE
  
-+"G3[X][Y][I][J]"
+"G3[X][Y][I][J]"
  
  
 +---------------------------------------------------
