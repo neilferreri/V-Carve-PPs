@@ -25,6 +25,7 @@
 + Ferreri  12/27/2019 Uncommented arc commands
 + Ferreri 1/25/2020   Ummmm...and related arc variables
 +                     Added Rapid Plunge to StartZ
++ Gary     02/18/2020 Insert Comments in top of Gcode file
 + ======== ========== ===========================
 
 POST_NAME = "Grbl (mm) TOOLCHANGE (*.gcode)"
@@ -81,6 +82,15 @@ VAR Z_HOME_POSITION = [ZH|A|Z|1.3]
  
 begin HEADER
  
+"(Postprocessor=[POST_NAME])"
+"(Tool=[TOOLNAME])"
+"(XYZ Origin=[XY_ORIGIN] - [Z_ORIGIN])"
+"(Safe Z=[SAFEZ]mm)"
+"(X Extent=[XMIN]mm,[XMAX]mm)"
+"(Y Extent=[YMIN]mm,[YMAX]mm)"
+"(Z Extent=[ZMIN]mm,[ZMAX]mm)"
+"(Toolpath Notes)"
+"([TOOLPATH_NOTES])" 
 "G17"
 "G21"
 "G90"
