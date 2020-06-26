@@ -98,7 +98,7 @@ begin TOOLCHANGE
 
 begin DWELL_MOVE
 
-"G04 [DWELL]"
+"G04 P[DWELL]"
 
 +---------------------------------------------------
 +  Commands output for rapid moves 
