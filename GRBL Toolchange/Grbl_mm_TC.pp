@@ -27,9 +27,9 @@
 +                     Added Rapid Plunge to StartZ
 + ======== ========== ===========================
 
-POST_NAME = "Grbl (mm) TOOLCHANGE (*.gcode)"
+POST_NAME = "Grbl (mm) TOOLCHANGE (*.nc)"
  
-FILE_EXTENSION = "gcode"
+FILE_EXTENSION = "nc"
  
 UNITS = "MM"
 
@@ -84,7 +84,7 @@ begin HEADER
 "G17"
 "G21"
 "G90"
-"M6 T[T]"
+"T[T]"
 "[S]M3"
 "G0[ZH]"
 "G0[XH][YH]"

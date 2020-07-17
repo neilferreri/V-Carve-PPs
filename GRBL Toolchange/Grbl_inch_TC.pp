@@ -84,7 +84,7 @@ begin HEADER
 "G17"
 "G20"
 "G90"
-"M6 T[T]"
+"T[T]"
 "[S]M3"
 "G0[ZH]"
 "G0[XH][YH]"
@@ -104,7 +104,7 @@ begin TOOLCHANGE
 
 begin DWELL_MOVE
 
-"G04 P[DWELL]"
+"G04 [DWELL]"
  
 +---------------------------------------------------
 +  Commands output for rapid moves 
