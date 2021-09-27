@@ -80,7 +80,7 @@ begin HEADER
 "M6 T[T]"
 "[S]M3"
 +"G0[ZH]"
-"G53G0Z-5"
+"G53G0Z-0.2"
 "G0[XH][YH]"
  
 
@@ -172,6 +172,6 @@ begin CCW_ARC_MOVE
 begin FOOTER
  
 +"G0[ZH]"
-"G53G0Z-5"
+"G53G0Z-0.2"
 "G0[XH][YH]"
 "M02"
